@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from '@/components/ui/sonner';
 import { Layout } from '@/components/Layout';
 import { Dashboard } from '@/pages/Dashboard';
@@ -15,7 +15,7 @@ import { Settings } from '@/pages/Settings';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Layout>
         <Routes>
           <Route path="/" element={<Dashboard />} />
@@ -33,7 +33,7 @@ function App() {
         </Routes>
       </Layout>
       <Toaster position="top-right" richColors />
-    </BrowserRouter>
+    </Router>
   );
 }
 
